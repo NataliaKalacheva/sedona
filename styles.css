@@ -130,7 +130,7 @@ a:active {
 }
 
 /*Преимущества*/
-.main-content h1,
+h1,
 h3 {
   font-size: 22px;
   text-align: center;
@@ -248,4 +248,303 @@ h3 {
   padding: 50px 0 70px;
   box-sizing: border-box;
   background-color: #eee;
+}
+
+/*Search section*/
+.map {
+  position: relative;
+}
+.map-img {
+  width: 100%;
+  height: 600px;
+}
+
+.map-img {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*search form*/
+
+.map-title {
+  margin-top: 40px;
+}
+.map-text {
+  width: 570px;
+  margin: 0 auto;
+  margin-bottom: 130px;
+  text-align: center;
+}
+.search-block {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 0);
+  width: 570px;
+  min-height: 480px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.search-title {
+  margin: 0;
+}
+
+.search-title .button {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #766357;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.search-title .button:hover,
+.search-title .button:focus {
+  background-color: #604e43;
+}
+.search-title .button:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+.search-form {
+  padding: 50px;
+}
+.search-form p {
+  margin-left: 0;
+  display: inline-block;
+  margin-right: 24px;
+  font-weight: 700;
+}
+.search-button {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 25px;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background-color: #81b3d2;
+  border: none;
+  cursor: pointer;
+}
+.search-button:hover,
+.search-button:focus {
+  background-color: #669ec0;
+}
+
+.search-button:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.amount-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.amount-item {
+  display: flex;
+}
+.amount-label.left {
+  margin-left: 28px;
+}
+.amount {
+  display: block;
+  width: 38px;
+  height: 38px;
+  border: none;
+  text-align: center;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+.amount-button {
+  display: block;
+  width: 38px;
+  height: 38px;
+  box-sizing: border-box;
+  font-weight: 900;
+  font-size: 14px;
+  color: #a9a9a9;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+}
+.amount-label {
+  position: relative;
+}
+.plus,
+.minus {
+  position: absolute;
+  left: 50%;
+  bottom: 55%;
+  transform: translate(-50%, 50%);
+  width: 12px;
+  height: 3px;
+  background-color: #a9a9a9;
+}
+
+.plus:after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 3px;
+  height: 12px;
+  background-color: #a9a9a9;
+}
+
+.amount-label:hover .plus,
+.amount-label:hover .plus:after,
+.amount-label:hover .minus {
+  background-color: #000000;
+}
+
+.amount-label:active .plus,
+.amount-label:active .plus:after,
+.amount-label:active .minus {
+  background-color: #81b3d2;
+}
+
+input.tcal {
+  display: inline-block;
+  padding: 12px;
+  box-sizing: border-box;
+  width: 346px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: none;
+}
+input.tcal:hover,
+#amount:hover {
+  background-color: #ebebeb;
+}
+input.tcal:focus,
+#amount:focus {
+  background-color: #fff;
+  border: 2px solid #ebebeb;
+  outline: none;
+}
+
+/*calendar form*/
+/* input box in default state */
+.tcalInput {
+  background: url("img/svg/cal.png") 97% 50% no-repeat;
+  opacity: 1;
+  cursor: pointer;
+  transition: background-image 0.2s linear;
+}
+
+.tcalInput:hover {
+  background: url("img/svg/cal-hover.png") 97% 50% no-repeat;
+}
+
+/* additional properties for input boxe in activated state, above still applies unless in conflict */
+.tcalActive {
+  background-image: url("img/svg/no-cal.png");
+}
+.tcalActive:hover {
+  background-image: url("img/svg/no-cal-hover.png");
+}
+
+/* container of calendar's pop-up */
+#tcal {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  z-index: 100;
+  width: 170px;
+  background-color: white;
+  margin-top: 2px;
+  padding: 0 2px 2px 2px;
+  border: 1px solid #a9a9a9;
+
+  -moz-box-shadow: 2px 2px 6px #a9a9a9;
+  -webkit-box-shadow: 2px 2px 6px #a9a9a9;
+  box-shadow: 2px 2px 6px #a9a9a9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#a9a9a9')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#a9a9a9');
+}
+
+/* table containing navigation and current month */
+#tcalControls {
+  border-collapse: collapse;
+  border: 0;
+  width: 100%;
+}
+#tcalControls td {
+  border-collapse: collapse;
+  border: 0;
+  padding: 0;
+  width: 16px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+#tcalControls th {
+  border-collapse: collapse;
+  border: 0;
+  padding: 0;
+  line-height: 25px;
+  font-size: 10px;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+}
+#tcalPrevYear {
+  background-image: url("img/prev_year.gif");
+}
+#tcalPrevMonth {
+  background-image: url("img/prev_mon.gif");
+}
+#tcalNextMonth {
+  background-image: url("img/next_mon.gif");
+}
+#tcalNextYear {
+  background-image: url("img/next_year.gif");
+}
+
+/* table containing week days header and calendar grid */
+#tcalGrid {
+  border-collapse: collapse;
+  border: 1px solid #a9a9a9;
+  width: 100%;
+}
+#tcalGrid th {
+  border: 1px solid #a9a9a9;
+  border-collapse: collapse;
+  padding: 3px 0;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-size: 10px;
+  background-color: #766357;
+  color: white;
+}
+#tcalGrid td {
+  border: 0;
+  border-collapse: collapse;
+  padding: 2px 0;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  width: 14%;
+  font-size: 11px;
+  cursor: pointer;
+}
+#tcalGrid td.tcalOtherMonth {
+  color: #a9a9a9;
+}
+#tcalGrid td.tcalWeekend {
+  background-color: rgba(129, 179, 210, 0.7);
+}
+#tcalGrid td.tcalToday {
+  border: 1px solid red;
+}
+#tcalGrid td.tcalSelected {
+  background-color: #ffb3be;
 }

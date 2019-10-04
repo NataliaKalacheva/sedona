@@ -116,21 +116,91 @@
           </div>
         </ul>
       </section>
-      <section>
-        <h1>Заинтересовались?</h1>
-        <p>
+      <section class="map">
+        <h1 class="map-title">Заинтересовались?</h1>
+        <p class="map-text">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <form action="url" method="POST">
-          <h3>Поиск гостиницы в Седоне</h3>
-          <p>Дата заезда: <input type="date" /></p>
-          <p>Дата выезда: <input type="date" /></p>
-          <p>Взрослые: <input type="number" max="6" min="1" value="1" /></p>
-          <p>Дети: <input type="number" max="6" min="1" value="1" /></p>
-          <button type="submit">Найти</button>
-        </form>
-        <img src="#" alt="Карта города" />
+        <div class="search-block">
+          <h3 class="search-title">
+            <button class="button">Поиск гостиницы в Седоне</button>
+          </h3>
+          <form class="search-form" action="url" method="POST">
+            <div class="amount-block">
+              <p>Дата заезда:</p>
+              <input
+                class="tcal"
+                type="text"
+                name="date"
+                class="tcal"
+                value=""
+              />
+            </div>
+
+            <div class="amount-block">
+              <p>Дата выезда:</p>
+              <input
+                class="tcal"
+                type="text"
+                name="date"
+                class="tcal"
+                value=""
+              />
+            </div>
+            <div class="amount-block">
+              <div class="amount-item">
+                <p>Взрослые:</p>
+                <label class="amount-label left">
+                  <div class="plus"></div>
+                  <input
+                    class="amount-button"
+                    type="button"
+                    onClick="change('amount',0,10, 1);"
+                  />
+                </label>
+                <input class="amount" id="amount" type="text" value="1" />
+                <label class="amount-label">
+                  <div class="minus"></div>
+                  <input
+                    class="amount-button"
+                    type="button"
+                    onClick="change('amount',0,10,-1);"
+                  />
+                </label>
+              </div>
+              <div class="amount-item">
+                <p>Дети:</p>
+                <label class="amount-label">
+                  <div class="plus"></div>
+                  <input
+                    class="amount-button"
+                    type="button"
+                    onClick="change('amount-children',0,10, 1);"
+                  />
+                </label>
+                <input
+                  class="amount"
+                  id="amount-children"
+                  type="text"
+                  value="1"
+                />
+                <label class="amount-label">
+                  <div class="minus"></div>
+                  <input
+                    class="amount-button"
+                    type="button"
+                    onClick="change('amount-children',0,10,-1);"
+                  />
+                </label>
+              </div>
+            </div>
+            <button class="search-button" type="submit">Найти</button>
+          </form>
+        </div>
+        <div class="map-img">
+          <img src="img/bg-map.jpg" alt="Карта города" />
+        </div>
       </section>
     </main>
     <footer>
@@ -146,5 +216,6 @@
       <p>Designed by</p>
       <address>Html academy</address>
     </footer>
+    <script type="text/javascript" src="tcal.js"></script>
   </body>
 </html>
