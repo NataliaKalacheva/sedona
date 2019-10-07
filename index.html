@@ -127,7 +127,7 @@
             <button class="button">Поиск гостиницы в Седоне</button>
           </h3>
           <form class="search-form" action="url" method="POST">
-            <div class="amount-block">
+            <div class="search-form-item">
               <p>Дата заезда:</p>
               <input
                 class="tcal"
@@ -138,7 +138,7 @@
               />
             </div>
 
-            <div class="amount-block">
+            <div class="search-form-item">
               <p>Дата выезда:</p>
               <input
                 class="tcal"
@@ -148,7 +148,7 @@
                 value=""
               />
             </div>
-            <div class="amount-block">
+            <div class="search-form-item">
               <div class="amount-item">
                 <p>Взрослые:</p>
                 <label class="amount-label left">
@@ -203,18 +203,33 @@
         </div>
       </section>
     </main>
-    <footer>
-      <h3>#VISIT SEDONA</h3>
+    <footer class="main-footer">
+      <h3 class="hashtag">#VISIT SEDONA</h3>
       <h2 class="visially-hiiden">Social media</h2>
-      <ul>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Youtube</a></li>
+      <ul class="social">
+        <li>
+          <a href="#" area-label="Twitter"
+            ><div class="social-item">
+              <img class="twitter" src="img/svg/twitter.svg" /></div
+          ></a>
+        </li>
+        <li>
+          <a href="#" area-label="Facebook"
+            ><div class="social-item">
+              <img class="fb" src="img/svg/fb-icon.svg" /></div
+          ></a>
+        </li>
+        <li>
+          <a href="#" area-label="Youtube"
+            ><div class="social-item">
+              <img class="youtube" src="img/svg/youtube.svg" /></div
+          ></a>
+        </li>
       </ul>
-      <p>Developed by</p>
-      <address>Kalachevs</address>
-      <p>Designed by</p>
-      <address>Html academy</address>
+      <div class="copyright">
+        <address class="author">Developed by <b>Kalacheva</b></address>
+        <address class="author">Designed by <b>Html academy</b></address>
+      </div>
     </footer>
     <script type="text/javascript" src="tcal.js"></script>
   </body>
