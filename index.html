@@ -15,20 +15,25 @@
     <header>
       <nav class="navbar">
         <ul class="navbar-list">
-          <li class="left-item">
+          <!--active-->
+          <li class="navbar-item left-item">
             <a class="navbar-link current-link" href="#">Главная</a>
           </li>
-          <li class="left-item">
+          <li class="navbar-item left-item">
             <a class="navbar-link" href="#">Фото и видео</a>
           </li>
-          <li class="right-item">
+          <li class="navbar-item right-item">
             <a class="navbar-link" href="#">Карта Штата</a>
           </li>
-          <li class="right-item">
+          <li class="navbar-item right-item">
             <a class="navbar-link" href="#">Гостинница</a>
           </li>
         </ul>
         <a class="navbar-logo" href="#"><img src="img/nav-logo.png" alt=""/></a>
+        <button class="nav-toggle">
+          <!--active-->
+          <div class="nav-toggle-item"></div>
+        </button>
       </nav>
       <section class="welcome-content">
         <h2 class="welcome-title">Welcome <span>to the georgeous</span></h2>
@@ -97,7 +102,10 @@
               </p>
             </li>
             <li class="content-item">
-              <h3 class="content-item-title">Красивая дорога</h3>
+              <h3 class="content-item-title">
+                Красивая<br />
+                дорога
+              </h3>
               <p>
                 <span class="item-number black">№4</span>Ехать в Седону из
                 Лас-Вегаса совсем не скучно!
@@ -160,7 +168,7 @@
                   />
                 </label>
                 <input class="amount" id="amount" type="text" value="1" />
-                <label class="amount-label">
+                <label class="amount-label right">
                   <div class="minus"></div>
                   <input
                     class="amount-button"
@@ -227,10 +235,11 @@
         </li>
       </ul>
       <div class="copyright">
-        <address class="author">Developed by <b>Kalacheva</b></address>
-        <address class="author">Designed by <b>Html academy</b></address>
+        <address class="author develop">Developed by <b>Kalacheva</b></address>
+        <address class="author design">Designed by <b>Html academy</b></address>
       </div>
     </footer>
+    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="tcal.js"></script>
   </body>
 </html>
