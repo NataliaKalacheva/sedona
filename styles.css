@@ -43,7 +43,7 @@ a:active {
   overflow: hidden;
 }
 
-/*Главное меню*/
+/*Navigation*/
 .navbar {
   position: relative;
   min-height: 46px;
@@ -225,7 +225,7 @@ p.welcome-text {
   left: 0;
 }
 
-/*Преимущества*/
+/*About*/
 h1,
 h3 {
   font-size: 22px;
@@ -314,7 +314,6 @@ h3 {
 }
 .content-sublist li {
   width: 33.3333%;
-  /* margin-right: 100px; */
 }
 .content-item-title {
   max-width: 180px;
@@ -658,7 +657,7 @@ input.tcal:focus,
   background-color: #ffb3be;
 }
 
-/*FOOTER*/
+/*footer*/
 .main-footer {
   position: absolute;
   bottom: 0;
@@ -725,6 +724,10 @@ ul.social {
   .content-photo {
     height: auto;
   }
+  .grey-list {
+    padding: 70px 0;
+  }
+
   .search-block {
     top: 16%;
   }
@@ -747,6 +750,7 @@ ul.social {
   h3 {
     font-size: 18px;
   }
+
   .main-body p {
     font-size: 12px;
   }
@@ -770,6 +774,9 @@ ul.social {
   p.welcome-text {
     font-size: 28px;
   }
+  .content-subtitle {
+    margin-bottom: 60px;
+  }
 
   .content-text {
     padding: 30px;
@@ -777,6 +784,11 @@ ul.social {
   .second-text,
   .first-text {
     padding-top: 60px;
+  }
+
+  .content-item p {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .search-block {
     top: 15%;
@@ -852,6 +864,11 @@ ul.social {
   .second-text,
   .first-text {
     padding-top: 60px;
+  }
+  .content-text {
+    min-height: auto;
+    padding: 40px;
+    margin-top: -2px;
   }
   .grey-list {
     padding-bottom: 20px;
