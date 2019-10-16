@@ -4,15 +4,19 @@
   let navMenu = document.querySelector(".navbar-list");
 
   navBtn.addEventListener("click", function() {
-    navBtn.classList.toggle("active");
-    navMenu.classList.toggle("active");
+    toggleMenu();
     closeMenu();
   });
+
+  function toggleMenu() {
+    navBtn.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  }
+
   function closeMenu() {
-    document.body.addEventListener("click", function(e) {
+    document.addEventListener("click", function(e) {
       if (!e.target.closest(".navbar")) {
-        navMenu.classList.remove("active");
-        navBtn.classList.remove("active");
+        toggleMenu();
       }
     });
   }
